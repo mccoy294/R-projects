@@ -9,6 +9,8 @@ heights
 y <- heights$sex
 x <- heights$height
 
+heights %>% group_by(sex) %>% summarize(mean(height), sd(height))
+
 set.seed(2)
 test_index <- createDataPartition(y, times = 1, p = 0.5, list = FALSE)
 train_set <- heights[-test_index, ]
