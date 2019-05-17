@@ -14,9 +14,10 @@ test_set <- heights[test_index, ]
 train_set <- heights[-test_index, ]
 
 y_hat <- sample(c("Male", "Female"),length(test_index), replace = TRUE)
-
+y_hat
 y_hat <- sample(c("Male", "Female"), length(test_index), replace = TRUE) %>% 
   factor(levels = levels(test_set$sex))
+y_hat
 
 mean(y_hat == test_set$sex)
 
